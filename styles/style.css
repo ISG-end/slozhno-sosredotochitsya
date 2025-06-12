@@ -1,5 +1,97 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: "IBM Plex mono", monospace;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--text-color, #f1b2ce);
+  background-color: var(--page-background-color, #000028);
+  background-image: var(--page-background-image,
+      url("../images/cover-image.png"));
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+}
+
+.header__theme-menu-button {
+  border: none;
+  background-color: transparent;
+}
+
+.header__theme-menu-button:active {
+  border: 1px solid #FF0070;
+}
+
+.header__theme-menu ul {
+  list-style: none;
+}
+
+.header__title-text {
+  color: rgba(219, 0, 255, 1);
+  text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
+  font-size: 157px;
+  margin-top: 273px;
+  font-weight: bold;
+}
+
+.rec-decor {
+    position: absolute;
+    z-index: -1;
+    display: inline-flex;
+    visibility: var(--rec-decor-visibility, visible);
+    align-items: center;
+    gap: 10px;
+    inset-inline-end: 20px;
+    inset-block-start: 10px;
+}
+
+.rec-decor::before {
+    line-height: 24px;
+    content: "REC";
+    color: var(--accent-color, #ff0070);
+}
+
+.rec-decor::after {
+    display: inline-block;
+    content: "";
+    border-radius: 50%;
+    background: var(--accent-color, #ff0070);
+    box-shadow: 0 0 4px var(--accent-color);
+    inline-size: 9px;
+    block-size: 9px;
+}
+
+.decorated-zone {
+    position: relative;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    block-size: 25px;
+    inline-size: 25px;
+}
+
+.decorated-zone::before {
+    border-inline-end: 1px solid var(--secondary-color, #ff0070);
+    border-block-start: 1px solid var(--secondary-color, #ff0070);
+    inset-inline-start: 1090px;
+    inset-block-start: clamp(10px, 0.0286rem + 2.5445vw, 0px);
+}
+
+.decorated-zone::after {
+    border-inline-start: 1px solid var(--secondary-color, #ff0070);
+    border-block-end: 1px solid var(--secondary-color, #ff0070);
+    inset-inline-end: 1090px;
+    inset-block-start:520px;
+}
+
