@@ -318,16 +318,13 @@
         margin-block-start: 0;
         margin-block-end: 215px;
     }
-
     .header__theme-menu-list {
         flex-direction: row;
     }
-
     .footer__title-shadow {
         text-shadow: 2px 2px 0 var(--color-purple-medium, #ff0070);
     }
 }
-
 @media (width >= 1024px) {
     .rec-decor {
         position: absolute;
